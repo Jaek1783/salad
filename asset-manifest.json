@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/salad/static/css/main.8d5fe649.css",
+    "main.js": "/salad/static/js/main.be031721.js",
+    "static/media/event.png": "/salad/static/media/event.0ffa43c89e310d5d8e46.png",
+    "static/media/pic05.jpg": "/salad/static/media/pic05.1171c997ae6ea8882a4c.jpg",
+    "static/media/pic03.jpg": "/salad/static/media/pic03.a5353fff7aec7d8aaf6b.jpg",
+    "static/media/pic02.jpg": "/salad/static/media/pic02.906382eaac342e13ea84.jpg",
+    "static/media/pic01.png": "/salad/static/media/pic01.a3ff719ba59f45230966.png",
+    "static/media/pic02.png": "/salad/static/media/pic02.7e545666022e2f193a7c.png",
+    "static/media/pic01.jpg": "/salad/static/media/pic01.8b7cf9b8da685db444c2.jpg",
+    "static/media/pic03.png": "/salad/static/media/pic03.5d83c3229936630613f2.png",
+    "static/media/pic04.png": "/salad/static/media/pic04.f91d2fc056fd64843edf.png",
+    "static/media/pic04.jpg": "/salad/static/media/pic04.1a0fe3a52ea2378a949a.jpg",
+    "static/media/Logo.png": "/salad/static/media/Logo.52650ecbf14d1bbd3eb3.png",
+    "index.html": "/salad/index.html",
+    "main.8d5fe649.css.map": "/salad/static/css/main.8d5fe649.css.map",
+    "main.be031721.js.map": "/salad/static/js/main.be031721.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8d5fe649.css",
+    "static/js/main.be031721.js"
+  ]
+}
