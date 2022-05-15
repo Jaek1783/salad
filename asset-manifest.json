@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/salad/static/css/main.dbe3e1a0.css",
-    "main.js": "/salad/static/js/main.0aa4c38a.js",
+    "main.css": "/salad/static/css/main.28dda90f.css",
+    "main.js": "/salad/static/js/main.525e20ad.js",
     "static/media/pic02.jpg": "/salad/static/media/pic02.906382eaac342e13ea84.jpg",
     "static/media/pic04.jpg": "/salad/static/media/pic04.1a0fe3a52ea2378a949a.jpg",
     "static/media/pic03.jpg": "/salad/static/media/pic03.a5353fff7aec7d8aaf6b.jpg",
@@ -18,14 +18,15 @@
     "static/media/pic07.png": "/salad/static/media/pic07.2b545b85751e212fb91b.png",
     "static/media/Logo.png": "/salad/static/media/Logo.52650ecbf14d1bbd3eb3.png",
     "static/media/google.png": "/salad/static/media/google.cadee8cdb0c0afb1a713.png",
+    "static/media/menu.png": "/salad/static/media/menu.50b3429929945ed2acf1.png",
     "static/media/kakao.png": "/salad/static/media/kakao.94f321a26f764341693e.png",
     "static/media/star02.png": "/salad/static/media/star02.618d11e122cbca3f8e9e.png",
     "index.html": "/salad/index.html",
-    "main.dbe3e1a0.css.map": "/salad/static/css/main.dbe3e1a0.css.map",
-    "main.0aa4c38a.js.map": "/salad/static/js/main.0aa4c38a.js.map"
+    "main.28dda90f.css.map": "/salad/static/css/main.28dda90f.css.map",
+    "main.525e20ad.js.map": "/salad/static/js/main.525e20ad.js.map"
   },
   "entrypoints": [
-    "static/css/main.dbe3e1a0.css",
-    "static/js/main.0aa4c38a.js"
+    "static/css/main.28dda90f.css",
+    "static/js/main.525e20ad.js"
   ]
 }
