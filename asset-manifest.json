@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/salad/static/css/main.21c9638f.css",
-    "main.js": "/salad/static/js/main.7c430ca8.js",
+    "main.css": "/salad/static/css/main.ace6ca06.css",
+    "main.js": "/salad/static/js/main.83d5589f.js",
     "static/media/pic02.jpg": "/salad/static/media/pic02.906382eaac342e13ea84.jpg",
     "static/media/pic04.jpg": "/salad/static/media/pic04.1a0fe3a52ea2378a949a.jpg",
     "static/media/pic03.jpg": "/salad/static/media/pic03.a5353fff7aec7d8aaf6b.jpg",
@@ -17,16 +17,17 @@
     "static/media/pic08.png": "/salad/static/media/pic08.83b7d086d9b6d4862030.png",
     "static/media/pic07.png": "/salad/static/media/pic07.2b545b85751e212fb91b.png",
     "static/media/Logo.png": "/salad/static/media/Logo.52650ecbf14d1bbd3eb3.png",
+    "static/media/close.png": "/salad/static/media/close.a7992e6cb9ff4c4e908e.png",
     "static/media/google.png": "/salad/static/media/google.cadee8cdb0c0afb1a713.png",
     "static/media/menu.png": "/salad/static/media/menu.50b3429929945ed2acf1.png",
     "static/media/kakao.png": "/salad/static/media/kakao.94f321a26f764341693e.png",
     "static/media/star02.png": "/salad/static/media/star02.618d11e122cbca3f8e9e.png",
     "index.html": "/salad/index.html",
-    "main.21c9638f.css.map": "/salad/static/css/main.21c9638f.css.map",
-    "main.7c430ca8.js.map": "/salad/static/js/main.7c430ca8.js.map"
+    "main.ace6ca06.css.map": "/salad/static/css/main.ace6ca06.css.map",
+    "main.83d5589f.js.map": "/salad/static/js/main.83d5589f.js.map"
   },
   "entrypoints": [
-    "static/css/main.21c9638f.css",
-    "static/js/main.7c430ca8.js"
+    "static/css/main.ace6ca06.css",
+    "static/js/main.83d5589f.js"
   ]
 }
