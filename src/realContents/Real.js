@@ -14,13 +14,6 @@ const Real = ()=>{
     const onSubmit = ()=>{
         const query = document.querySelectorAll('.star_radio:checked');
         const checkbox = document.querySelectorAll('.star_radio');
-        let today = new Date();
-        axios.post('http://localhost:3001/posts',{
-            title:title,
-            body:body,
-            date:today.toLocaleDateString(),
-            num:query.length
-        });
         // 리셋
         setTitle('');
         setBody('');
@@ -32,17 +25,11 @@ const Real = ()=>{
     }
         // 저장된 값 가져오기
         const [contents, setContents] = useState([]);
-        useEffect(()=>{
-            axios.get('http://localhost:3001/posts')
-                .then(response=>{
-                    setContents(response.data);
-                });
-        },[]);
     return(
     <div className="main">
         <Header/>
         <div className="real">
-            {contents.length == 0? '후기가 없습니다.':   <RealContents contents = {contents}/> } 
+            {/* {contents.length == 0? '후기가 없습니다.':   <RealContents contents = {contents}/> }  */}
         </div>
         <div className="inputBox">
             <form>

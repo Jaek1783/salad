@@ -1,11 +1,11 @@
 import React from "react";
 import RenderEvents from "./renderEvent";
 import Header from '../Mobile_Header';
-import pic01 from '../img/Event/pic01.jpg';
-import pic02 from '../img/Event/pic02.jpg';
-import pic03 from '../img/Event/pic03.jpg';
-import pic04 from '../img/Event/pic04.jpg';
-import pic05 from '../img/Event/pic05.jpg';
+import pic01 from '../img/Event/pic01.png';
+import pic02 from '../img/Event/pic02.png';
+import pic03 from '../img/Event/pic03.png';
+import pic04 from '../img/Event/pic04.png';
+import pic05 from '../img/Event/pic05.png';
 const Event_Page = ()=> {
     const events = [
         {id:1, img:pic01, title:'<EVENT> 샐러디x배민1 프로모션', date:'이벤트기간 2021/10/11~2021/10/17'},

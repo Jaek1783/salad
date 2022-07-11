@@ -1,6 +1,20 @@
 import React ,{useState,useEffect,useRef} from "react";
 import { useMediaQuery } from 'react-responsive';
+import styled from 'styled-components';
+import slide01 from './../img/Slide/pic01.jpg';
+import slide02 from './../img/Slide/pic02.jpg';
+import slide03 from './../img/Slide/pic03.jpg';
+import slide04 from './../img/Slide/pic04.jpg';
+import slide05 from './../img/Slide/pic05.jpg';
 
+const slideImg = [
+    {id:1, img:slide01,alt:'슬라이드이미지'},
+    {id:2, img:slide02,alt:'슬라이드이미지'},
+    {id:3, img:slide03,alt:'슬라이드이미지'},
+    {id:4, img:slide04,alt:'슬라이드이미지'},
+    {id:5, img:slide05,alt:'슬라이드이미지'},
+    {id:6, img:slide01,alt:'슬라이드이미지'},
+];
 const Slide = ()=> {
     // 슬라이드 내용 클론 만들기
     const slide = document.querySelectorAll('.slide-item'),
@@ -8,32 +22,23 @@ const Slide = ()=> {
 
     const [currentIdx, setCrruentIdx] = useState(0);
     const idxRef = useRef(0);
-
-    useEffect(()=>{
-        const slides = document.querySelector('.slides'),
-        slide = document.querySelectorAll('.slide-item');
-        let cloneSlide = slide[0].cloneNode(true);
-        cloneSlide.classList.add('clone');
-        slides.appendChild(cloneSlide);
-    },[]);
+    const slideRef = useRef(null);
     // 오토 슬라이드 만들기
     useEffect(()=>{
-        setInterval(()=>{
-            setCrruentIdx((idxRef.current+=1));  
+       const timer = setInterval(()=>{
+           setCrruentIdx((idxRef.current+=1));  
         },3000);
+        return ()=> clearInterval(timer);
     },[]);
-    useEffect(()=>{
-        const slides = document.querySelector('.slides');
         if(currentIdx !== slideCount){
-            slides.style.left = -currentIdx*100 + '%';
+            slideRef.current.style.left = -currentIdx*100 + '%';
                 }
         if(currentIdx == slideCount-1){
             setTimeout(()=>{
-                slides.style.left = 0 + '%';
+                slideRef.current.style.left = 0 + '%';
                 setCrruentIdx((idxRef.current=0));
             },300);
         }
-    });
     // 미디어쿼리 Mobile
     const Mobile = useMediaQuery({
         query:"(max-Width:950px)"}
@@ -41,12 +46,14 @@ const Slide = ()=> {
     return(
         <>
           <div className="slide-container">
-            <ul className={0< currentIdx && currentIdx <slideCount ? 'slides animated':'slides'}>
-                <li className="slide-item slide01"></li>
-                <li className="slide-item slide02"></li>
-                <li className="slide-item slide03"></li>
-                <li className="slide-item slide04"></li>
-                <li className="slide-item slide05"></li>
+            <ul className={0< currentIdx && currentIdx <slideCount ? 'slides animated':'slides'} ref={slideRef}>
+                {slideImg.map(slide=>{
+                    return(
+                        <li key={slide.id} className="slide-item">
+                            <img src={slide.img} alt={slide.alt+slide.id} />
+                        </li>
+                    )
+                })}
             </ul>
          {/*  페이저 만들기 */}
             <div className="pager">
