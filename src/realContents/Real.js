@@ -1,35 +1,39 @@
 import React, {useState, useEffect} from "react";
-import axios from "axios";
+
 import Header from '../Mobile_Header';
 import RealContents from './Real_contents';
+import { useDispatch } from "react-redux";
+import { createReal } from "../Redux/Real";
 
 
 const Real = ()=>{
+    const dispatch = useDispatch();
+
     // 체크된 평점 개수 구하기
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
     const [checked, setChecked] = useState('true');
+        // 저장된 값 가져오기
 
-    // submit 버튼 누르면 저장
-    const onSubmit = ()=>{
-        const query = document.querySelectorAll('.star_radio:checked');
-        const checkbox = document.querySelectorAll('.star_radio');
-        // 리셋
-        setTitle('');
-        setBody('');
-        for(let i=0; i<checkbox.length; i++){
-            if (checkbox[i].type='checkbox'){
-                checkbox[i].checked=true;
+        // submit 버튼 누르면 저장
+        const onSubmit = ()=>{
+            const num = document.querySelectorAll('.star_radio:checked').length;
+            const checkbox = document.querySelectorAll('.star_radio');
+            dispatch(createReal({num:num,title:title,body:body}));
+            // 리셋
+            setTitle('');
+            setBody('');
+            for(let i=0; i<checkbox.length; i++){
+                if (checkbox[i].type='checkbox'){
+                    checkbox[i].checked=true;
+                }
             }
         }
-    }
-        // 저장된 값 가져오기
-        const [contents, setContents] = useState([]);
     return(
     <div className="main">
         <Header/>
         <div className="real">
-            {/* {contents.length == 0? '후기가 없습니다.':   <RealContents contents = {contents}/> }  */}
+            <RealContents/>
         </div>
         <div className="inputBox">
             <form>
@@ -45,6 +49,7 @@ const Real = ()=>{
                     <input type="text" id="real_title" placeholder="제목" value={title} 
                     onChange={event=>{
                         setTitle(event.target.value);
+
                     }}/>
                 </p>
                 <p>
@@ -54,7 +59,22 @@ const Real = ()=>{
                 </p>
             </form>
             <button className="real_btn" type="reset" onClick={()=>{
-                onSubmit();
+                if(title === ""){
+                    if(body === ""){
+                        alert("제목과 글을 작성해주세요");
+                    }
+                    else{
+                        alert("제목을 작성해주세요");
+                    }
+                }
+                else{
+                    if(body === ""){
+                        alert("글을 작성해 주세요");
+                    }
+                    else{
+                        onSubmit();
+                    }
+                }
             }}>전송</button>
         </div>
     </div>

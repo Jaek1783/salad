@@ -1,23 +1,35 @@
 import React from "react";
-import close from '../img/Icon/close.png';
-
-const Modal = ({contents})=>{
-        const modal_close = ()=>{
-        const Mbox = document.querySelector('.modal_container');
-        Mbox.style.display = 'none';
-    }
-    const contentsClone = [...contents];
-    return(
-        <div className="modal_container">
-        <p className="Modal_close" onClick={()=>{
-            modal_close();
-        }}><img src={close} alt="닫기" /></p>
-        <div className="modal">
-        <ul className="real_modal">
-            <li>제목: {console.log(contentsClone[0].title)}</li>
-        </ul>
-        <div className="modal_text"></div>
+import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import styled from "styled-components";
+const Modal = (props)=>{
+    const data = useSelector(state=>state.Real.list);
+    const params = useParams();
+    const index = params.index-1;
+    if(index !== -1){
+        return(
+            <div className="modal_container">
+            <div className="modal">
+            <ul className="real_modal">
+                <li>제목:{data[index].title}</li>
+            </ul>
+            <div className="modal_text">
+                {data[index].body}
+            </div>
+            </div>
         </div>
-    </div>
-    )
+        )
+    }
+    else{
+        return(
+            <Container>
+                댓글 제목을 클릭하여 상세 글을 확인 할 수 있습니다.
+            </Container>
+        )
+    }
 };export default Modal;
+
+const Container = styled.div`
+text-align:center;
+padding-top:5rem;
+`; 

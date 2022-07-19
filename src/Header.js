@@ -27,8 +27,8 @@ const Header = (props)=>{
                 <ul className="nav_ul">
                     <li><Link to="/brand">브랜드</Link></li>
                     <li><Link to="/menu">메뉴</Link></li>
-                    <li><Link to="/event">이벤트</Link></li>
-                    <li><Link to="/real">후기</Link></li>
+                    <li><Link to="/event/0">이벤트</Link></li>
+                    <li><Link to="/real/0">후기</Link></li>
                 </ul>
                 <div className="login_text"><Link to="/login">로그인</Link></div>
             </nav>
