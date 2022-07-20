@@ -1,18 +1,25 @@
 import React from "react";
 import { useMediaQuery } from 'react-responsive';
-
+import { useSelector } from "react-redux";
 const Info = (props)=>{
     const pc = useMediaQuery({
         query:"(min-Width:1260px)"}
      );
+     const info = useSelector(state=>state.Menu.info);
     return(
-        <dl className={pc ? "text04Box_pc" : "text04Box_M"}>
-            <dt className="menu_title">{props.info.title}</dt>
-            <dd>
-                <p>{props.info.content01}</p>
-                <p>{props.info.content02}</p>
-            </dd>
-        </dl>
+        <>
+        {info.map(list=>{
+            return(
+                <dl className={pc ? "text04Box_pc" : "text04Box_M"} key={list.id}>
+                    <dt className="menu_title">{list.title}</dt>
+                    <dd>
+                        <p>{list.content01}</p>
+                        <p>{list.content02}</p>
+                    </dd>
+                </dl>
+            )
+        })}
+        </>
     );
 };
 export default Info;

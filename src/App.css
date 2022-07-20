@@ -574,15 +574,6 @@ overflow: hidden;
 .real_pic:hover{
   transform: scale(1.2);
 }
-.inputBox{
-  width:50%;
-  height:20rem;
-  margin: 3rem auto;
-  background-color: #e1dfdf;
-  padding:1rem 3rem;
-  box-sizing: border-box;
-  position: relative;
-}
 #real_title{
   width:100%;
   box-sizing: border-box;
@@ -641,35 +632,12 @@ padding: .5rem;
   flex-direction: column;
   box-sizing: border-box;
 }
-.real_item{
-  width:50%;
-  margin:0 auto;
-  display:flex;
-  justify-content: space-between;
-  padding:.5rem;
-  border-bottom: 1px solid #000;
-  position: relative;
-  transition:.3s ease-in-out;
-}
-.real_item>div{
-  width:100%;
-  display:flex;
-  justify-content: space-between;
-}
+
+
 .real_contents{
   display: flex;
 }
-.real_title{
-  width:50%;
-  margin:0 auto;
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  border-bottom:2px solid #000;
-  padding-top:3rem;
-  padding-bottom:.3rem;
-  box-sizing: border-box;
-}
+
 .real_text{
   cursor: pointer;
   text-decoration-line: underline;
@@ -690,12 +658,6 @@ cursor: pointer;
 }
 
 /* 모달창 만들기 */
-.modal{
-  width:50%;
-  height:15rem;
-  background-color: #c1c1c1;
-  margin:1rem auto;
-}
 .real_modal{
   width:90%;
   margin:0 auto;

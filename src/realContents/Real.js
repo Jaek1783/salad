@@ -4,10 +4,14 @@ import Header from '../Mobile_Header';
 import RealContents from './Real_contents';
 import { useDispatch } from "react-redux";
 import { createReal } from "../Redux/Real";
-
+import { useMediaQuery } from "react-responsive";
+import styled from "styled-components";
 
 const Real = ()=>{
     const dispatch = useDispatch();
+    const isPc = useMediaQuery({
+        query:"(min-Width:1260px)"}
+     );
 
     // 체크된 평점 개수 구하기
     const [title, setTitle] = useState('');
@@ -35,7 +39,7 @@ const Real = ()=>{
         <div className="real">
             <RealContents/>
         </div>
-        <div className="inputBox">
+        <Input isPc={isPc}>
             <form>
                 <p className="starRatingBox"> 
                     <span>평점 : </span>
@@ -76,8 +80,17 @@ const Real = ()=>{
                     }
                 }
             }}>전송</button>
-        </div>
+        </Input>
     </div>
     );
 };
 export default Real;
+const Input = styled.div`
+width:${props=>props.isPc ? "50%":"80%"};
+height:20rem;
+margin: 3rem auto;
+background-color: #e1dfdf;
+padding:1rem 3rem;
+box-sizing: border-box;
+position: relative;
+`;

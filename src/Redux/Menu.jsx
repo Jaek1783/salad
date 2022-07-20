@@ -24,28 +24,36 @@ import pic18 from '../img/Menu/menu04/pic04.png';
 
 const initState = {
     list:[
-        {id:1, title:'웜볼', img:menu01, value : 'title'},
-        {id:1, img:pic01, title:'칠리베이컨 CHILLI BACON', subTitle:'베이컨, 에그, 옥수수, 양파플레이크 *크리미칠리', value : 'desc' },
+        {id:1, title:'웜볼', img:menu01, subTitle:"소화가 잘되는 현미밥", value : 'title'},
+        {id:1, img:pic01, title:'칠리베이컨 CHILLI BACON', subTitle:'베이컨, 계란, 옥수수, 양파플레이크 *크리미칠리', value : 'desc' },
         {id:1, img:pic02, title:'우삼겹 BEEF LOIN', subTitle:'우삼겹, 양파, 견과류 *오리엔탈', value : 'desc' },
-        {id:1, img:pic03, title:'팔라펠단호박 FALAFEL SWEET PUMPKIN', subTitle:'팔라펠,단호박,칙피,양파,옥수수 *크리미할라피뇨', value : 'desc' },
-        {id:1, img:pic04,title:'고추장머쉬룸 GOCHUJANG MUSHROOM', subTitle:'머쉬룸,두부,두부크럼블,양파,옥수수 *고추장비니거', value : 'desc' },
+        {id:1, img:pic03, title:'팔라펠단호박 FALAFEL SWEET PUMPKIN', subTitle:'팔라펠,단호박,칙피, 양파,옥수수 *크리미할라피뇨', value : 'desc' },
+        {id:1, img:pic04,title:'고추장머쉬룸 GOCHUJANG MUSHROOM', subTitle:'머쉬룸,두부,두부크럼블, 양파,옥수수 *고추장비니거', value : 'desc' },
         {id:1, img:pic05, title:'할라피뇨치킨 JALAPENO CHICKEN', subTitle:'치킨, 할라피뇨, 칠리빈, 옥수수, 양파, 사워크림, *크리미칠리', value : 'desc' },
-        {id:2, title:'샐러드', img:menu02 , value : 'title'},
+        {id:2, title:'샐러드', img:menu02 ,subTitle:"싱싱하고 아삭한 야채", value : 'title'},
         {id:2, img:pic06, title:'시저치킨 CAESAR CHICKEN', subTitle:'치킨, 크랜베리 *시저', value : 'desc'},
         {id:2, img:pic07, title:'탄단지 TANDANJI', subTitle:'치킨, 스윗포테이토, 견과류, 크랜베리 *오리엔탈저', value : 'desc'},
-        {id:2, img:pic08, title:'콥 COBB', subTitle:'베이컨, 에그, 옥수수, 올리브, 양파 *시저', value : 'desc'},
+        {id:2, img:pic08, title:'콥 COBB', subTitle:'베이컨, 계란, 옥수수, 올리브, 양파 *시저', value : 'desc'},
         {id:2, img:pic09, title:'리코타치즈 RICOTTA CHEESE', subTitle:'리코타치즈, 크랜베리, 견과류, 통밀빵 *발사믹', value : 'desc'},
         {id:2, img:pic10, title:'연어 SALMON', subTitle:'연어, 스윗포테이토, 양파 *레몬', value : 'desc'},
-        {id:2, img:pic11, title:'우삼겹메밀면 BEEF LOIN BUCKWHEAT NOODLES', subTitle:'우삼겹,메밀면,오이,양파,견과류 *오리엔탈', value : 'desc'},
-        {id:3, title:'샌드', img:menu03 , value : 'title'},
+        {id:2, img:pic11, title:'우삼겹메밀면 BEEF LOIN BUCKWHEAT NOODLES', subTitle:'우삼겹,메밀면,오이, 양파,견과류 *오리엔탈', value : 'desc'},
+        {id:3, title:'샌드', img:menu03 ,subTitle:"건강하고 맛있는 곡물빵", value : 'title'},
         {id:3, img:pic12, title:'치킨토마토 CHICKEN TOMATO', subTitle:'치킨, 토마토, *시저, 크림치즈, 채소, 곡물빵', value : 'desc'},
-        {id:3, img:pic13, title:'우삼겹 BEEF LOIN', subTitle:'에그, 베이컨, *허니머스타드, 크림치즈, 채소, 곡물빵', value : 'desc'},
+        {id:3, img:pic13, title:'우삼겹 BEEF LOIN', subTitle:'계란, 베이컨, *허니머스타드, 크림치즈, 채소, 곡물빵', value : 'desc'},
         {id:3, img:pic14, title:'크리미연어 CREAMY SALMON', subTitle:'연어, 양파, 크리미할라피뇨 드레싱, 크림치즈, 채소, 곡물빵', value : 'desc'},
-        {id:4, title:'랩', img:menu04 , value : 'title'},
+        {id:4, title:'랩', img:menu04 ,subTitle:"멕시코가 생각나는 또띠아", value : 'title'},
         {id:4, img:pic15, title:'멕시칸 MEXICAN', subTitle:'그라운드비프, 또띠아칩, *크리미칠리, 사워크림, 채소, 또띠아', value : 'desc'},
         {id:4, img:pic16, title:'시저치킨 CAESAR CHICKEN', subTitle:'치킨, 크랜베리, *시저, 채소, 또띠아', value : 'desc'},
         {id:4, img:pic17, title:'크랜베리그릭 CRANBERRY GREEK', subTitle:'크랜베리, 올리브, 토마토, 견과류, 크림치즈, *시저, 채소, 또띠아', value : 'desc'},
         {id:4, img:pic18, title:'크리미연어 CREAMY SALMON', subTitle:'연어, 토마토, 양파, 크리미할라피뇨 드레싱, 채소, 또띠아', value : 'desc'}
+    ],
+    info : [
+        {id:1, title:'균형', content01:'샐러드 브라더스는 3대 영양소인 탄수화물, 단백질, 지방의 적절한 분배와 균형을 추구합니다.',
+        content02:'개개인의 식습관에 따라 탄수화물, 단백질, 지방간의 구성 비율이 다양한 샐러디의 메뉴들을 선택할 수 있습니다.'},
+        {id:2, title:'더하기', content01:'일반적인 식습관을 가지고 있는 대부분의 사람들은 비타민, 무기질, 식이섬유 섭취가 부족합니다.',
+        content02:'샐러드 브라더스는 다양한 종류의 채소와 토핑들로 평소 섭취가 부족한 영양소들을 더하는데 도움을 줍니다.'},
+        {id:3, title:'빼기', content01:'대부분의 성인은 세 가지 영양소를 권장량에 비해 더 많이 섭취하고 있습니다.',
+        content02:'기존 메뉴에서 빼야 할 영양소는 줄여가고, 맛과 품질을 유지하는 선에서 레시피 개선에 대한 연구를 지속하고 있습니다.'}
     ],
     menu:[
         {id:0, title:'전체보기'},
@@ -59,12 +67,16 @@ const initState = {
 
 const CREATE = "menu/CREATE";
 const FILTER = "menu/FILTER";
+const SEARCH = "menu/SEARCH";
 
 export const createMenu = (menu)=>{
     return{type:CREATE, menu}
 };
 export const filterMenu = (index) =>{
     return{type:FILTER, index};
+}
+export const searchMenu = (value) =>{
+    return{type:SEARCH, value};
 }
 
 export default function reducer(state = initState, action = {}){
@@ -83,7 +95,8 @@ export default function reducer(state = initState, action = {}){
                 const title = [...filter_menu_list];
                 const list = [...state.list];
                 const menu = [...state.menu];
-                return {title:title, menu:menu, list:list};
+                const info = [...state.info];
+                return {title:title, menu:menu, list:list, info:info};
                 // return state;
             }
             else{
@@ -91,8 +104,19 @@ export default function reducer(state = initState, action = {}){
                 const list = [...state.list];
                 const title = [...filter_menu_list];
                 const menu = [...state.menu];
-                return {title:title, menu:menu, list:list};
+                const info = [...state.info];
+                return {title:title, menu:menu, list:list, info:info};
             }
+        case "menu/SEARCH":
+            const search_list = state.list.filter(function(element){
+                return element.subTitle.indexOf(action.value) !== -1;
+                // return state;
+            });
+            const list = [...state.list];
+                const title = [...search_list];
+                const menu = [...state.menu];
+                const info = [...state.info];
+            return {title:title, menu:menu, list:list, info:info};
         default:
             return state;
     }

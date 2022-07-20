@@ -1,36 +1,37 @@
-import React from "react";
+import React,{useRef} from "react";
 import Info from "./Informations";
 import Header from '../Mobile_Header';
 import { useSelector,useDispatch } from "react-redux";
-import { createMenu, filterMenu } from "../Redux/Menu";
+import {filterMenu, searchMenu } from "../Redux/Menu";
 import styled from "styled-components";
+import { useMediaQuery } from 'react-responsive';
 
 
 const Menu_Page = ()=> {
     const dispatch = useDispatch();
     const data = useSelector(state=>state.Menu.title);
     const menu = useSelector(state=>state.Menu.menu);
-    const informations = [
-        {id:1, title:'균형', content01:'샐러드 브라더스는 3대 영양소인 탄수화물, 단백질, 지방의 적절한 분배와 균형을 추구합니다.',
-        content02:'개개인의 식습관에 따라 탄수화물, 단백질, 지방간의 구성 비율이 다양한 샐러디의 메뉴들을 선택할 수 있습니다.'},
-        {id:2, title:'더하기', content01:'일반적인 식습관을 가지고 있는 대부분의 사람들은 비타민, 무기질, 식이섬유 섭취가 부족합니다.',
-        content02:'샐러드 브라더스는 다양한 종류의 채소와 토핑들로 평소 섭취가 부족한 영양소들을 더하는데 도움을 줍니다.'},
-        {id:3, title:'빼기', content01:'대부분의 성인은 세 가지 영양소를 권장량에 비해 더 많이 섭취하고 있습니다.',
-        content02:'기존 메뉴에서 빼야 할 영양소는 줄여가고, 맛과 품질을 유지하는 선에서 레시피 개선에 대한 연구를 지속하고 있습니다.'}
-    ];
-
-    const renderInformations = informations.map(info=>{
-        return(
-            <Info info={info} key={info.title} />
-        );
-    });
+    const textRef = useRef(null);
+    const isPc = useMediaQuery({
+        query:"(min-Width:1260px)"}
+     );
     return(
         <div className="main">
           <Header/>
-            {renderInformations}
-            <InputStyle>
-              <input type="text" placeholder="메뉴 이름을 검색해 보세요"/>
-              <input type="submit" value="검색"/>
+          <Info/>
+            <InputStyle isPc = {isPc}>
+              <input type="text" placeholder="재료를 검색해 보세요" ref={textRef}/>
+              <input type="submit" value="검색" onClick = {(e)=>{
+                e.preventDefault();
+                if(textRef.current.value === ''){
+                    alert("검색어를 적어주세요");
+                }
+                else{
+                    dispatch(searchMenu(textRef.current.value));
+                }
+                textRef.current.value = '';
+                
+              }}/>
             </InputStyle>
             <SubMenu>
                 {menu.map(nav=>{
@@ -50,8 +51,8 @@ const Menu_Page = ()=> {
                             <dl>
                                 <dt><img src={menu.img} alt={'메뉴이미지0'+menu.id} /></dt>
                                 <dd> 
-                                    <p>{menu.title}</p>
-                                    <p>{menu.subTitle}</p>
+                                    <p>메뉴 : {menu.title}</p>
+                                    <p>주재료 : {menu.subTitle}</p>
                                 </dd>
                             </dl>
                         </Container>
@@ -70,7 +71,7 @@ text-align:center;
 padding:1rem;
 margin-top:3rem;
     input[type=text]{
-        width:20%;
+        width:${props => props.isPc ? "20%":"80%"};
         height:2rem;
         border:3px solid #0d633d;
         padding:.5rem;
@@ -90,10 +91,11 @@ const SubMenu = styled.ul`
     justify-content:center;
     padding:1rem;
     li{
-        padding:0 3rem;
+        padding:0 2rem;
         text-align:center;
         border-right:3px solid #0d633d;
         cursor:pointer;
+        // font-size:.5rem;
     }
     li:first-child{
         border-left: 3px solid #0d633d;
@@ -121,7 +123,7 @@ const Container = styled.div`
 
     }
     dd{
-        font-size : ${props => props.menu.value === 'title' ? "1.3rem":"1rem"};
+        font-size : ${props => props.menu.value === 'title' ? "1.5rem":"1rem"};
         font-weight : ${props => props.menu.value === 'title' ? "bold":"400"};
     }
 `;
