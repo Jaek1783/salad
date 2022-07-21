@@ -26,6 +26,7 @@ const Container = styled.div`
 margin:10rem auto;
     .eventImg {
         text-align:center;
+        height:8.5rem;
     }
 
     img{
@@ -38,6 +39,7 @@ margin:10rem auto;
         font-size:30px;
         font-weight:bold;
         padding-top:3rem;
+        
     }
     dd{
         font-size:20px;
@@ -50,7 +52,7 @@ margin:10rem auto;
         font-weight:bold;
         border-radius:15px;
         position:absolute;
-        top:48%;
+        bottom:40%;
         left:50%;
         transform:translate(-50%);
         cursor:pointer;

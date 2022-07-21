@@ -39,14 +39,19 @@ const Slide = ()=> {
                 setCrruentIdx((idxRef.current=0));
             },300);
         }
-    // 미디어쿼리 Mobile
-    const Mobile = useMediaQuery({
-        query:"(max-Width:950px)"}
+    // 미디어쿼리
+    const isPc = useMediaQuery({
+        query : "(min-width:1030px)"
+    });
+    const Tablet = useMediaQuery({
+        query:"(min-Width:680px)"}
      );
+     const TabletOrMobile01 = Tablet? "text01_T":"text01_M";
+     const TabletOrMobile02 = Tablet? "text02_T":"text02_M";
     return(
         <>
           <div className="slide-container">
-            <ul className={0< currentIdx && currentIdx <slideCount ? 'slides animated':'slides'} ref={slideRef}>
+            <Slides className={0< currentIdx && currentIdx <slideCount ? 'animated':''} ref={slideRef} isPc = {isPc}>
                 {slideImg.map(slide=>{
                     return(
                         <li key={slide.id} className="slide-item">
@@ -54,7 +59,7 @@ const Slide = ()=> {
                         </li>
                     )
                 })}
-            </ul>
+            </Slides>
          {/*  페이저 만들기 */}
             <div className="pager">
                 <span data-idx="0" className={currentIdx == 0 ? "active": ""}
@@ -85,10 +90,24 @@ const Slide = ()=> {
             </div>
           </div>
         <div className="mainText">
-            <p className={Mobile? "text01_M":"text01"}>건강하게 맛있다.</p>
-            <p className={Mobile? "text02_M":"text02"}>샐러드에 맛과 고급을 더했습니다.</p>
+            <p className={isPc? "text01":TabletOrMobile01}>샐러드가 청년같다!!</p>
+            <p className={isPc? "text02":TabletOrMobile02}>청년과 같이! 청년에 의한! 청년을 위한!</p>
         </div>
         </>
     )
 }
 export default Slide;
+
+const Slides = styled.ul`
+width:600%;
+display:flex;
+pointer-events: none;
+position:absolute;
+top:0;
+left:0;
+    li{
+        img{
+            height:${props=>props.isPc? "":"85vh"}
+        }
+    }
+`;

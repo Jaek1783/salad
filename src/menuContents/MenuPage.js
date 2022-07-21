@@ -44,20 +44,22 @@ const Menu_Page = ()=> {
                     )
                 })}
             </SubMenu>
-            <div>
-                {data.map((menu,index)=>{
-                    return(
-                        <Container key={index} menu={menu}>
-                            <dl>
-                                <dt><img src={menu.img} alt={'메뉴이미지0'+menu.id} /></dt>
-                                <dd> 
-                                    <p>메뉴 : {menu.title}</p>
-                                    <p>주재료 : {menu.subTitle}</p>
-                                </dd>
-                            </dl>
-                        </Container>
-                    )
-                })}
+            <div className="menu_page">
+                {data.length !== 0 ?
+                    data.map((menu,index)=>{
+                        return(
+                            <Container key={index} menu={menu} isPc = {isPc}>
+                                <dl>
+                                    <dt><img src={menu.img} alt={'메뉴이미지0'+menu.id} /></dt>
+                                    <dd> 
+                                        <p>메뉴 : {menu.title}</p>
+                                        <p>주재료 : {menu.subTitle}</p>
+                                    </dd>
+                                </dl>
+                            </Container>
+                               )})
+                :"메뉴를 검색하거나 메뉴보기를 클릭해 주세요"}
+                
             </div>
         </div>
     );
@@ -103,12 +105,11 @@ const SubMenu = styled.ul`
     
 `;
 const Container = styled.div`
-
     width:80%;
     margin:0 auto;
     dl{
         margin:${props => props.menu.value === 'title' ? "0 auto":"0"};
-        display:flex;
+        display:${props => props.isPc ?  "flex":"block"};
         align-items:center;
         justify-content:${props => props.menu.value === 'title' ? "center":""};
         padding:.5rem;
@@ -119,7 +120,9 @@ const Container = styled.div`
     dt{
         width:${props => props.menu.value === 'title' ? "10rem":"8rem"};
         padding:${props => props.menu.value === 'title' ? "3rem":"0"};
-
+        img{
+            width:${props => props.menu.value === 'title' ? "10rem":"8rem"};
+        }
 
     }
     dd{

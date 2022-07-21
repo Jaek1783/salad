@@ -32,8 +32,14 @@ const RealContents = ()=>{
                                     navigate('/real/'+(index+1));
                                 }}>{real.title}</p>
                                 <button className="item_del" onClick={()=>{
-                                    dispatch(deleteReal(index));
-                                    navigate('/real/0');
+                                    if(index == 0){
+                                        alert("로그인 후 이용하세요");
+                                    }
+                                    else{
+                                        dispatch(deleteReal(index));
+                                        navigate('/real/0');
+                                    }
+                                    
                                 }}>X</button>
                             </Items>
                         )
