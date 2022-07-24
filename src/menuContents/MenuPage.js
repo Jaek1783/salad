@@ -25,7 +25,7 @@ const Menu_Page = ()=> {
         <div className="main">
           <Header/>
           <Info/>
-            <InputStyle isPc = {isPc} isTablet={isTablet}>
+            <InputStyle isPc = {isPc} isMobile={isMobile}>
               <input type="text" placeholder="재료를 검색해 보세요" ref={textRef}/>
               <input type="submit" value="검색" onClick = {(e)=>{
                 e.preventDefault();
@@ -39,7 +39,7 @@ const Menu_Page = ()=> {
                 
               }}/>
             </InputStyle>
-            <SubMenu isTablet={isTablet} isPc={isPc}>
+            <SubMenu isMobile={isMobile} isTablet={isTablet} isPc={isPc}>
                 {menu.map(nav=>{
                     return(
                         <li key={nav.id} onClick={()=>{
@@ -86,7 +86,7 @@ margin-top:3rem;
     }
     input[type=submit]{
         padding:${props => props.isPc ? ".5rem":".5rem 1rem"};
-        margin-left:${props => props.isPc ? "2rem": props.isTablet ? "2rem":"0"};
+        margin-left:${props => props.isPc ? "2rem": props.isMobile ? "0":"2rem"};
         margin-top:${props => props.isPc ? "0":"1rem"};
         background-color:#0d633d;
         color:#fff;
@@ -100,7 +100,7 @@ const SubMenu = styled.ul`
     justify-content:center;
     padding:1rem;
     li{
-        padding:${props => props.isPc ? "0 1rem":"0 1rem"};
+        padding:${props => props.isMobile ? "0 .4rem":"0 1rem"};
         text-align:center;
         border-right:3px solid #0d633d;
         cursor:pointer;

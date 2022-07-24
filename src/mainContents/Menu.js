@@ -1,22 +1,32 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
-import Pic01 from "../img/Menu/pic01.png";
-import Pic02 from "../img/Menu/pic02.png";
-import Pic03 from "../img/Menu/pic03.png";
-import Pic04 from "../img/Menu/pic04.png";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Menu = ()=>{
+    const data = useSelector(state=>state.Menu.list);
+    const navigate = useNavigate();
+
     const pc = useMediaQuery({
         query:"(min-Width:950px)"}
      );
+    const mainTitle = data.filter(l=>{
+        return l.value === 'title';
+        
+    });
     return(
         <div className={pc? "menu mg10" : "menu mg05"}>
         <span></span>
         <ul>
-            <li><img src={Pic01} alt="메뉴 이미지01" /></li>
-            <li><img src={Pic02} alt="메뉴 이미지02" /></li>
-            <li><img src={Pic03} alt="메뉴 이미지03" /></li>
-            <li><img src={Pic04} alt="메뉴 이미지04" /></li>
+            {mainTitle.map((l,index)=>{
+                return(
+                    <li key={index} onClick={()=>{
+                        navigate('/menu');
+                    }}>
+                        <img src={l.img} alt="메뉴 이미지" />
+                    </li>
+                )
+            })}
         </ul>
         </div>
     )

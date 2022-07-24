@@ -24,6 +24,7 @@ export default EventDetail;
 
 const Container = styled.div`
 margin:10rem auto;
+position:relative;
     .eventImg {
         text-align:center;
         height:8.5rem;
@@ -52,7 +53,7 @@ margin:10rem auto;
         font-weight:bold;
         border-radius:15px;
         position:absolute;
-        bottom:40%;
+        bottom:-100px;
         left:50%;
         transform:translate(-50%);
         cursor:pointer;
