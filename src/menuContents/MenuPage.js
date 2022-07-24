@@ -15,11 +15,17 @@ const Menu_Page = ()=> {
     const isPc = useMediaQuery({
         query:"(min-Width:1260px)"}
      );
+     const isTablet = useMediaQuery({
+        query:"(max-width:1259px)"
+     });
+     const isMobile = useMediaQuery({
+        query:"(max-width:500px)"
+     });
     return(
         <div className="main">
           <Header/>
           <Info/>
-            <InputStyle isPc = {isPc}>
+            <InputStyle isPc = {isPc} isTablet={isTablet}>
               <input type="text" placeholder="재료를 검색해 보세요" ref={textRef}/>
               <input type="submit" value="검색" onClick = {(e)=>{
                 e.preventDefault();
@@ -33,7 +39,7 @@ const Menu_Page = ()=> {
                 
               }}/>
             </InputStyle>
-            <SubMenu>
+            <SubMenu isTablet={isTablet} isPc={isPc}>
                 {menu.map(nav=>{
                     return(
                         <li key={nav.id} onClick={()=>{
@@ -48,7 +54,7 @@ const Menu_Page = ()=> {
                 {data.length !== 0 ?
                     data.map((menu,index)=>{
                         return(
-                            <Container key={index} menu={menu} isPc = {isPc}>
+                            <Container key={index} menu={menu} isPc = {isPc} isMobile={isMobile} isTablet={isTablet}>
                                 <dl>
                                     <dt><img src={menu.img} alt={'메뉴이미지0'+menu.id} /></dt>
                                     <dd> 
@@ -79,25 +85,25 @@ margin-top:3rem;
         padding:.5rem;
     }
     input[type=submit]{
-        padding:.5rem;
-        margin-left:1rem;
+        padding:${props => props.isPc ? ".5rem":".5rem 1rem"};
+        margin-left:${props => props.isPc ? "2rem": props.isTablet ? "2rem":"0"};
+        margin-top:${props => props.isPc ? "0":"1rem"};
         background-color:#0d633d;
         color:#fff;
         border:3px solid #0d633d;
     }
 `;
 const SubMenu = styled.ul`
-    width:50%;
+    width:${props => props.isPc ? "50%":"80%"};
     margin:0 auto;
     display:flex;
     justify-content:center;
     padding:1rem;
     li{
-        padding:0 2rem;
+        padding:${props => props.isPc ? "0 1rem":"0 1rem"};
         text-align:center;
         border-right:3px solid #0d633d;
         cursor:pointer;
-        // font-size:.5rem;
     }
     li:first-child{
         border-left: 3px solid #0d633d;
@@ -109,16 +115,17 @@ const Container = styled.div`
     margin:0 auto;
     dl{
         margin:${props => props.menu.value === 'title' ? "0 auto":"0"};
-        display:${props => props.isPc ?  "flex":"block"};
+        display:${props => props.isMobile ?  "block":"flex"};
         align-items:center;
         justify-content:${props => props.menu.value === 'title' ? "center":""};
         padding:.5rem;
         border:${props => props.menu.value === 'title' ? "none":"3px solid #0d633d"};
         margin-bottom:.3rem;
-    }
+        text-align:${props => props.isMobile ?  "center":"left"};
 
     dt{
         width:${props => props.menu.value === 'title' ? "10rem":"8rem"};
+        margin:${props => props.isMobile ?  "0 auto":"0"};
         padding:${props => props.menu.value === 'title' ? "3rem":"0"};
         img{
             width:${props => props.menu.value === 'title' ? "10rem":"8rem"};
