@@ -131,7 +131,7 @@ h1{
   right:0;
   text-align: center;
 }
-.pager span{
+.pager span:not(:last-child){
   width:10px;
   height:10px;
   background: #3f3f3f;
