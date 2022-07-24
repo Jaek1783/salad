@@ -1,31 +1,29 @@
 {
   "files": {
-    "main.css": "/salad/static/css/main.5cd7354c.css",
-    "main.js": "/salad/static/js/main.66e530f0.js",
+    "main.css": "/salad/static/css/main.ada61036.css",
+    "main.js": "/salad/static/js/main.5a161f16.js",
+    "static/media/pic08.jpg": "/salad/static/media/pic08.15f06a35f14b44440878.jpg",
+    "static/media/pic09.jpg": "/salad/static/media/pic09.e4eb1438c6b48d48109e.jpg",
+    "static/media/pic06.jpg": "/salad/static/media/pic06.7eca77ccf2ce37bdff33.jpg",
     "static/media/event.png": "/salad/static/media/event.0ffa43c89e310d5d8e46.png",
-    "static/media/pic05.jpg": "/salad/static/media/pic05.1171c997ae6ea8882a4c.jpg",
-    "static/media/pic03.jpg": "/salad/static/media/pic03.a5353fff7aec7d8aaf6b.jpg",
-    "static/media/pic02.jpg": "/salad/static/media/pic02.906382eaac342e13ea84.jpg",
+    "static/media/pic07.jpg": "/salad/static/media/pic07.a191c0ef73e424674815.jpg",
+    "static/media/pic10.jpg": "/salad/static/media/pic10.bbd5bb30d27ea5bb2b09.jpg",
     "static/media/pic04.png": "/salad/static/media/pic04.5acc2ee368f08438741a.png",
     "static/media/pic02.png": "/salad/static/media/pic02.7d214f30e3d6d5789ec6.png",
     "static/media/pic06.png": "/salad/static/media/pic06.dbe54b81b6a3bef0a46f.png",
     "static/media/pic03.png": "/salad/static/media/pic03.30dc301034b4a6a1cf04.png",
     "static/media/pic01.png": "/salad/static/media/pic01.f91d2fc056fd64843edf.png",
     "static/media/pic05.png": "/salad/static/media/pic05.45547c5527a4c3b20637.png",
-    "static/media/pic01.jpg": "/salad/static/media/pic01.8b7cf9b8da685db444c2.jpg",
-    "static/media/pic04.jpg": "/salad/static/media/pic04.1a0fe3a52ea2378a949a.jpg",
     "static/media/Logo.png": "/salad/static/media/Logo.52650ecbf14d1bbd3eb3.png",
     "static/media/close.png": "/salad/static/media/close.a7992e6cb9ff4c4e908e.png",
-    "static/media/google.png": "/salad/static/media/google.cadee8cdb0c0afb1a713.png",
     "static/media/menu.png": "/salad/static/media/menu.50b3429929945ed2acf1.png",
-    "static/media/kakao.png": "/salad/static/media/kakao.94f321a26f764341693e.png",
     "static/media/star02.png": "/salad/static/media/star02.618d11e122cbca3f8e9e.png",
     "index.html": "/salad/index.html",
-    "main.5cd7354c.css.map": "/salad/static/css/main.5cd7354c.css.map",
-    "main.66e530f0.js.map": "/salad/static/js/main.66e530f0.js.map"
+    "main.ada61036.css.map": "/salad/static/css/main.ada61036.css.map",
+    "main.5a161f16.js.map": "/salad/static/js/main.5a161f16.js.map"
   },
   "entrypoints": [
-    "static/css/main.5cd7354c.css",
-    "static/js/main.66e530f0.js"
+    "static/css/main.ada61036.css",
+    "static/js/main.5a161f16.js"
   ]
 }
