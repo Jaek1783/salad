@@ -134,7 +134,7 @@ h1{
 .pager span:not(:last-child){
   width:10px;
   height:10px;
-  background: #3f3f3f;
+  background: rgba(63, 63, 63, 0.576);
   border-radius: 50%;
   display: inline-block;
   text-indent:-9999em;
@@ -142,6 +142,8 @@ h1{
   cursor: pointer;
 }
 .pager span.active{
+  width:15px;
+  height:15px;
   background-color:#fff;
 }
 
