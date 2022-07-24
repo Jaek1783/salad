@@ -9,11 +9,9 @@ import Menu_Page from "./menuContents/MenuPage";
 import Event_Page from "./eventContens/Event_page";
 import EventDetail from "./eventContens/EventDetail";
 import Real from "./realContents/Real";
-import {db} from "./firebase";
 
 function App() {
  let content = null;
- console.log(db);
   return (
     <>
     <Header/>

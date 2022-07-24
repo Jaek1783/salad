@@ -37,10 +37,9 @@ useEffect(()=>{
                                 }}>{real.title}</p>
                                 <button className="item_del" onClick={()=>{
                                     if(index == 0){
-                                        alert("로그인 후 이용하세요");
+                                        alert("관리자에게 문의해주세요");
                                     }
                                     else{
-                                        // dispatch(deleteReal(index));
                                         dispatch(deleteRealFB(real.id));
                                         navigate('/real/0');
                                     }
