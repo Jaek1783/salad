@@ -20,7 +20,7 @@ const Modal = ()=>{
         </div>
         )
      }
-    if(index > 0){
+    if(index+1 > 0){
             return(
                 <div className="modal_container">
                 <ModalStyle isPc={isPc}>
