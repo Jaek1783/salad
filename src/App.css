@@ -102,27 +102,12 @@ h1{
   padding-top:5rem;
 }
 /* Slide-container */
-.slide-container{
-  width:100%;
-  height:85vh;
-  overflow: hidden;
-  position: relative;
-  background-color: #0d633d;
-}
 
 .animated{
   transition:.3s ease-in-out;
 }
 .active{ transition:.3s ease-in-out;}
-.slide-item{
-  display: inline-block;
-  width:100%;
-  height:100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position:0 30%;
 
-}
 .arr{
   background-color:#fff;
   border-top:1px;
@@ -159,7 +144,7 @@ h1{
 .pager span{
   width:10px;
   height:10px;
-  background: #000;
+  background: #3f3f3f;
   border-radius: 50%;
   display: inline-block;
   text-indent:-9999em;
@@ -171,16 +156,7 @@ h1{
 }
 
 /* 메인화면 메인 문구 스타일 */
-.mainText{
-  position:absolute;
-  top:30%;
-  color:#0d633d;
-  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
 
-  z-index:99;
-  padding-top:1.5rem;
-  padding-left:1rem;
-}
 .text01{
   font-size: 8rem;
   font-weight: bold;
@@ -342,167 +318,6 @@ margin-top:10rem;
   line-height: 50px;
   margin-top:3rem;
   margin: 3rem auto 0;
-}
-
-
-/* 로그인 상세페이지 반응형 스타일 */
-.login_M{
-  width:100%;
-}
-.login_img_M{
-  width:100%;
-}
-.login_img_M>p{
-  width:350px;
-  margin:1rem auto 2rem ;
-}
-.main_login_M{
-  width:80%;
-  text-align: center;
-  margin: 0 auto;
-}
-
-/*로그인 상세페이지 스타일*/
-.login{
-  width:100%;
-  display: flex; 
-  padding-top:6rem;
-}
-.login_img{
-width:50%;
-border-right:1px solid #ccc;
-}
-.login_img>p{
-  width:350px;
-  margin:3rem auto 0 ;
-}
-
-.main_login{
-  width:50%;
-  text-align: center;
-}
-input[name='login']{
-  width:15rem;
-  height:2rem;
-  border-radius: 15px;
-  border:1px solid #9b9b9b;
-  padding-left:1rem;
-  box-sizing: border-box;
-}
-.id{
-  padding-bottom:.5rem;
-}
-
-.loginBtn>button{
-  width:15rem;
-  height:2rem;
-  border-radius: 15px;
-  background-color: #0D633D;
-  border:none;
-  color:#fff;
-  font-size: 1.1rem;
-  margin-top:1rem;
-  margin-bottom:1rem;
-}
-.join{
-  width:100%;
-  margin:0 auto ;
-}
-.join>p{
-  width:15rem;
-  height:2rem;
-  border:1px solid #9b9b9b;
-  border-radius: 15px;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 2rem;
-  margin:0 auto;
-  margin-bottom:.5rem;
-  font-size: .9rem;
-  box-sizing: border-box;
-  padding-left:1rem;
-  font-weight: bold;
-}
-.login_subText{
-  font-size: .7rem;
-}
-.kakao{
-  background-color: #fef615;
-
-  color:#000;
-}
-.naver{
-  background-color: #23c649;
-  color:#fff;
-}
-.google{
-  background-color: #e4e4e4;
-  color:#616161;
-}
-.kakao{
-  vertical-align: middle;
-}
-.icon{
-  position: relative;
-}
-.icon>img{
-  width:20px;
-  vertical-align: middle;
-  position:absolute;
-  top:15%;
-  left:10%;
-}
-
-/* Brand 상세페이지 스타일 */
-.Brand{
-  width:100%;
-  display: flex;
-  padding-top:6rem;
-}
-.Brand{
-  width:100%;
-  padding-top:6rem;
-}
-.BrandImg{
-width:50%;
-border-right:1px solid #ccc;
-}
-.width100{
-  width:100%;
-}
-.width50{
-  width:50%;
-}
-.BrandImg_M>p{
-  margin:0 auto;
-}
-.BrandImg>p{
-  width:500px;
-  margin:0 auto;
-}
-.brandTextBox>dt{
-width:150px;
-display: flex;
-margin: 0 auto;
-}
-.brandTextBox>dd{
-  text-align: center;
-  padding-top:3rem;
-  font-size: .9rem;
-}
-.brandTextBox_M>dt{
-  width:150px;
-  display: flex;
-  margin:3rem auto 0;
-  }
-  .brandTextBox_M>dd{
-    text-align: center;
-    padding-top:3rem;
-    font-size: .9rem;
-  }
-dd>strong{
-  font-size: 1.15rem;
-  font-weight: bold;
 }
 
 /* event 상세 페이지 스타일*/

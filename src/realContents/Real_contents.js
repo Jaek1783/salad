@@ -1,10 +1,11 @@
-import React,{useRef} from "react";
+import React,{useEffect} from "react";
 import { useSelector,useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { deleteReal } from "../Redux/Real";
+import {deleteRealFB,loadRealFB } from "../Redux/Real";
 import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import Modal from "./modal";
+
 const RealContents = ()=>{
     const navigate = useNavigate();
     const data = useSelector(state=>state.Real.list);
@@ -12,6 +13,9 @@ const RealContents = ()=>{
     const isPc = useMediaQuery({
         query:"(min-Width:1260px)"}
      );
+useEffect(()=>{
+     dispatch(loadRealFB());
+},[]);
     return(
         <>  
         <div>
@@ -36,7 +40,8 @@ const RealContents = ()=>{
                                         alert("로그인 후 이용하세요");
                                     }
                                     else{
-                                        dispatch(deleteReal(index));
+                                        // dispatch(deleteReal(index));
+                                        dispatch(deleteRealFB(real.id));
                                         navigate('/real/0');
                                     }
                                     

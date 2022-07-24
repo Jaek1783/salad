@@ -30,7 +30,6 @@ const Header = (props)=>{
                     <li><Link to="/event/0">이벤트</Link></li>
                     <li><Link to="/real/0">후기</Link></li>
                 </ul>
-                <div className="login_text"><Link to="/login">로그인</Link></div>
             </nav>
     }
     {/* 모바일 헤더 스타일 / 949px 이하로 떨어졌을 때 nav */}

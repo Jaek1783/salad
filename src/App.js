@@ -3,16 +3,17 @@ import { Route, Routes} from 'react-router-dom';
 import './App.css';
 import Header from './Header';
 import Footer from './Footer';
-import Login from './loginContents/Login';
 import Brand from './brandContents/Brand';
 import Main from './mainContents/Main';
 import Menu_Page from "./menuContents/MenuPage";
 import Event_Page from "./eventContens/Event_page";
 import EventDetail from "./eventContens/EventDetail";
 import Real from "./realContents/Real";
+import {db} from "./firebase";
 
 function App() {
  let content = null;
+ console.log(db);
   return (
     <>
     <Header/>
@@ -20,7 +21,6 @@ function App() {
       <Routes>
       <Route path="/brand" element={<Brand/>} />
       <Route path="/menu" element={<Menu_Page/>} />
-      <Route path="/login" element={<Login/>} />
       <Route path="/event/0" element={<Event_Page/>}/>
       <Route path="/event/:index/*" element={<EventDetail/>}/>
       <Route path="/real/:index/*" element={<Real/>}/>

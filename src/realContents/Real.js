@@ -3,7 +3,7 @@ import React, {useState, useEffect} from "react";
 import Header from '../Mobile_Header';
 import RealContents from './Real_contents';
 import { useDispatch } from "react-redux";
-import { createReal } from "../Redux/Real";
+import { addRealFB, createReal } from "../Redux/Real";
 import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 
@@ -23,7 +23,7 @@ const Real = ()=>{
         const onSubmit = ()=>{
             const num = document.querySelectorAll('.star_radio:checked').length;
             const checkbox = document.querySelectorAll('.star_radio');
-            dispatch(createReal({num:num,title:title,body:body}));
+            dispatch(addRealFB({num:num,title:title,body:body}));
             // 리셋
             setTitle('');
             setBody('');

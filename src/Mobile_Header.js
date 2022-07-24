@@ -26,7 +26,6 @@ const Mobile_Header = ()=>{
                         <li><Link to="/event/0">이벤트</Link></li>
                         <li><Link to="/real/0">후기</Link></li>
                     </ul>
-                    <div className="login_949px_text"><Link to="/login">로그인</Link></div>
                 </nav>
             </div>
         }
