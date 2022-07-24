@@ -49,17 +49,7 @@ h1{
   padding-left:3rem;
   padding-right:3rem;
 }
-.login_text{
-  float:right;
-  padding-top:2rem;
-  padding-left:3rem;
-  padding-right:3rem;
-  width:10rem;
-  font-size: 1rem;
-  font-weight: bold;
-  color:#0D633D;
-  box-sizing: border-box;
-}
+
 /* 950px이하 gnb스타일 */
 .hamburger{
   width:40%;
@@ -190,6 +180,57 @@ h1{
   font-size: 1.1rem;
   padding-top:.3rem;
   padding-left:.5rem;
+}
+/* Brand 상세페이지 스타일 */
+.Brand{
+  width:100%;
+  display: flex;
+  padding-top:6rem;
+}
+.Brand{
+  width:100%;
+  padding-top:6rem;
+}
+.BrandImg{
+width:50%;
+border-right:1px solid #ccc;
+}
+.width100{
+  width:100%;
+}
+.width50{
+  width:50%;
+}
+.BrandImg_M>p{
+  margin:0 auto;
+}
+.BrandImg>p{
+  width:500px;
+  margin:0 auto;
+}
+.brandTextBox>dt{
+width:150px;
+display: flex;
+margin: 0 auto;
+}
+.brandTextBox>dd{
+  text-align: center;
+  padding-top:3rem;
+  font-size: .9rem;
+}
+.brandTextBox_M>dt{
+  width:150px;
+  display: flex;
+  margin:3rem auto 0;
+  }
+  .brandTextBox_M>dd{
+    text-align: center;
+    padding-top:3rem;
+    font-size: .9rem;
+  }
+dd>strong{
+  font-size: 1.15rem;
+  font-weight: bold;
 }
 /* menu */
 .mg10{
