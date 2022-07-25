@@ -15,7 +15,7 @@ const EventDetail = ()=>{
                 <dd>{data[index].date}</dd>
             </dl>
             <button onClick={()=>{
-                navigate('/event/0');
+                navigate(-1);
             }}>돌아가기</button>
         </Container>
     )

@@ -19,10 +19,12 @@ function App() {
       <Routes>
       <Route path="/brand" element={<Brand/>} />
       <Route path="/menu" element={<Menu_Page/>} />
-      <Route path="/event/0" element={<Event_Page/>}/>
+      <Route path="/event" element={<Event_Page/>}/>
       <Route path="/event/:index/*" element={<EventDetail/>}/>
       <Route path="/real/:index/*" element={<Real/>}/>
+      <Route path="/real/" element={<Real/>}/>
       <Route path="/salad" element={<Main/>}/>
+      <Route path="/" element={<Main/>}/>
       <Route path="*" element={<Main/>}></Route>
       </Routes>
       <Footer/>
