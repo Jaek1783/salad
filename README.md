@@ -17,6 +17,9 @@
 * 리액트 퍼블리싱 코딩 2주
 * 최종 디자인 수정, 파이어베이스 연동 및 배포(https연결) 1주
 
+## 주소
+* https://www.saladbrother.ml
+
 ## 사용스택
 <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/> <img src="https://img.shields.io/badge/styled-components-DB7093?style=flat-square&logo=styled-components&logoColor=white"/>
 <img src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"/>
