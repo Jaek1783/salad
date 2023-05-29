@@ -10,7 +10,6 @@
 <img src="https://user-images.githubusercontent.com/73649967/180778031-7604e63e-a217-4946-8a17-6d18bf95ea3a.png" width="250"> <img src="https://user-images.githubusercontent.com/73649967/180778657-1db17a4c-76cb-4d09-a88e-0ca4d687eaf9.png" width="250">
 
 ## 서비스 아키텍처
-![버킷리스트 아키텍처](https://user-images.githubusercontent.com/73649967/179435714-32454277-3e48-4818-bd82-6fe19151572f.png)
 
 ## 제작기간
 * XD를 이용한 기획 및 디자인 1개월
