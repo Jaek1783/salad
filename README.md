@@ -22,9 +22,3 @@
 <img src="https://img.shields.io/badge/Redux-764ABC?style=flat-square&logo=Redux&logoColor=white"/>
 <img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=white"/>
 <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white"/>
-
-
-<img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=flat-square&logo=Amazon AWS&logoColor=white"/> <img src="https://img.shields.io/badge/Amazon S3-569A31?style=flat-square&logo=Amazon S3&logoColor=white"/>
-<img src="https://img.shields.io/badge/Amazon ClouldFront-FF9900?style=flat-square&logo=Amazon EC2&logoColor=white"/>
-<img src="https://img.shields.io/badge/Amazon Route 53-CA4245?style=flat-square&logo=Amazon EC2&logoColor=white"/>
-<img src="https://img.shields.io/badge/HTTPS-006600?style=flat-square"/>
